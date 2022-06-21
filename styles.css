@@ -1,0 +1,149 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1{
+    color: #8243a7;
+}
+
+.context, p{
+    font-size: 20px;
+    padding: 1.5%;
+}
+
+
+:root {
+    --navHeight: 70px;
+}
+  
+* {
+    color: var(--fontColor);
+    transition: background-color 0.6s ease, color 1s ease;
+}
+  
+.switch {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.switch div {
+    position: relative;
+    display: block;
+    background: #eee;
+    width: 30px;
+    border-radius: 50px;
+    padding: 0.5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.fa-adjust {
+    transform: rotate(180deg);
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #999;
+    transition: 0.4s;
+    border-radius: 34px;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    position: relative;
+    border-color: #beb1bf;
+    background-color: var(--themeSwitchColor);
+}
+
+input:checked + .slider {
+    transform: translateX(8px);
+}
+
+nav, footer {
+    background: var(--navBg);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    height: var(--navHeight);
+    padding: 0 10px;
+}
+
+nav ul li {
+    padding: 12px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+}
+
+nav ul li:hover {
+    background-color: var(--navLinkHoverBg);
+    border-radius: 25px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    background: #efebf1;
+    height: calc(100vh - var(--navHeight));
+    background: var(--mainBg);
+}
+
+
+/* Style rules for light and dark mode */
+:root{
+    --navHeight:70px;
+    --purple: #551055;
+    --palePurple: #9A649A;
+    --darkPurple: #6B286B;
+    --darkGray: #635963;
+    --lightGray: #635963;
+    --white: #F8F4FA;
+    --black: #232323;
+}
+
+.light-theme {
+    --themeDropDownBg: var(--palePurple);
+    --themeIconBorderColor: var(--darkPurple);
+    --navBg: var(--palePurple);
+    --navLinkHoverBg: var(--white);
+    --mainBg: var(--white);
+    --fontColor: var(--black);
+    --themeSwitchColor: var(--purple);
+  }
+  
+.dark-theme {
+    --themeDropDownBg: var(--black);
+    --themeIconBorderColor: var(--lightGray);
+    --navBg: var(--darkGray);
+    --navLinkHoverBg: var(--palePurple);
+    --mainBg: var(--black);
+    --fontColor: var(--white);
+    --themeSwitchColor: var(--darkPurple);
+}
+
+
